@@ -8,7 +8,7 @@ export const fetchArticles = async (): Promise<Article[]> => {
       params: { query: 'mobile' },
     });
 
-    console.log(`response: ${response}`);
+    console.log(`response: ${JSON.stringify(response.data.hits)}`);
     return response.data.hits;
 
   } catch (error: any) {

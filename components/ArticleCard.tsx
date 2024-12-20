@@ -1,17 +1,15 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 interface ArticleCardProps {
     title: string;
-    imageUrl: string;
     author: string;
     createdAt: string;
 }
 
-const ArticleCard: React.FC<ArticleCardProps> = ({ title, imageUrl, author, createdAt }) => {
+const ArticleCard: React.FC<ArticleCardProps> = ({ title, author, createdAt }) => {
     return (
         <View style={styles.card}>
-            <Image source={{ uri: imageUrl }} style={styles.image} />
             <View style={styles.content}>
                 <Text style={styles.title} numberOfLines={2}>
                     {title}
@@ -35,10 +33,6 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         marginHorizontal: 15,
         overflow: 'hidden',
-    },
-    image: {
-        width: '100%',
-        height: 150,
     },
     content: {
         padding: 10,

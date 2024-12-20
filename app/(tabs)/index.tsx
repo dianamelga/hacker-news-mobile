@@ -26,7 +26,6 @@ const HomeScreen = () => {
           renderItem={({ item }) => (
             <ArticleCard
               title={item.title || 'No Title'}
-              imageUrl={item.url || 'https://via.placeholder.com/150'} // Placeholder for missing images
               author={item.author || 'Unknown Author'}
               createdAt={item.created_at}
             />
