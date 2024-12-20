@@ -4,10 +4,15 @@ import { ThemedView } from '@/components/ThemedView';
 import { useFetchArticles } from '@/hooks/useFetchArticles';
 import { ActivityIndicator } from 'react-native-paper';
 import ArticleCard from '@/components/ArticleCard';
+import { useEffect } from 'react';
 
 const HomeScreen = () => {
 
   const { fetchData, loading, articles, error } = useFetchArticles();
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <ThemedView style={styles.container}>
