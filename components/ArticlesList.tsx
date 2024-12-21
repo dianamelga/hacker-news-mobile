@@ -88,14 +88,11 @@ export const ArticlesList = ({ type }: ArticlesListProps) => {
           ItemSeparatorComponent={() => <Divider />}
           contentContainerStyle={styles.contentContainer}
           refreshing={loading}
-          ListHeaderComponent={
-            loading ? (
-              <ThemedView style={styles.loadingContainer}>
-                <ActivityIndicator size="large" color={themeColors.primary} />
-              </ThemedView>
-            ) : null
-          }
         />
+      ) : loading ? (
+        <ThemedView style={styles.loadingContainer}>
+          <ActivityIndicator size="large" color={themeColors.primary} />
+        </ThemedView>
       ) : (
         <ThemedView style={styles.emptyContainer}>
           <ThemedText>{`No ${type} articles available`}</ThemedText>

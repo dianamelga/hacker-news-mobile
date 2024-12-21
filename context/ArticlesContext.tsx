@@ -55,7 +55,7 @@ export const ArticlesProvider: React.FC<ArticlesProviderProps> = ({
   } = useFetchArticles();
 
   useEffect(() => {
-    AsyncStorage.clear(); // TODO: remove later, just testing
+    // AsyncStorage.clear(); // TODO: remove later, just testing
 
     loadArticles();
   }, []);
@@ -97,6 +97,10 @@ export const ArticlesProvider: React.FC<ArticlesProviderProps> = ({
   }, [deletedArticles, allArticles, favoritedArticles]);
 
   const loadArticles = async () => {
+    const articlesDeleted = await loadDeletedArticles();
+    setDeletedArticles(articlesDeleted);
+    const articlesFavorited = await loadFavoritedArticles();
+    setFavorited(articlesFavorited);
     await fetchData();
   };
 

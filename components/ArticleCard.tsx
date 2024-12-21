@@ -70,7 +70,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   );
 };
 
-const CARD_HEIGHT = 100;
+const CARD_HEIGHT = 120;
 
 const styles = StyleSheet.create({
   author: {
@@ -109,6 +109,7 @@ const styles = StyleSheet.create({
   },
   title: {
     marginBottom: 5,
+    marginRight: 45,
   },
 });
 
