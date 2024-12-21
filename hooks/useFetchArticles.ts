@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { fetchArticles } from '@/services/hackerNewsApi';
 import { Article } from '@/models/HackerNews';

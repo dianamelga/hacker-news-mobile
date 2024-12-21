@@ -8,7 +8,6 @@ export const fetchArticles = async (): Promise<Article[]> => {
     });
 
     return response.data.hits;
-
   } catch (error: any) {
     throw new Error(`Error fetching data: ${error.message}`);
   }

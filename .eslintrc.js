@@ -1,6 +1,6 @@
 // https://docs.expo.dev/guides/using-eslint/
 module.exports = {
-  extends: ['expo', 'plugin:prettier/recommended'],
+  extends: ['expo', 'plugin:prettier/recommended', 'eslint-config-prettier'],
   plugins: ['prettier', 'react-native'],
   globals: {
     __dirname: true,

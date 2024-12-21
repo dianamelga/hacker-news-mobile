@@ -8,7 +8,6 @@ import { themeColors } from '@/styles/colors';
 import { MaterialIcons } from '@expo/vector-icons';
 
 export default function TabLayout() {
-
   return (
     <Tabs
       screenOptions={{
@@ -23,26 +22,33 @@ export default function TabLayout() {
           },
           default: {},
         }),
-      }}>
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <MaterialIcons color={color} size={28} name="home" />,
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons color={color} size={28} name="home" />
+          ),
         }}
       />
       <Tabs.Screen
         name="favorites"
         options={{
           title: 'Favorites',
-          tabBarIcon: ({ color }) => <MaterialIcons color={color} size={28} name="favorite" />,
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons color={color} size={28} name="favorite" />
+          ),
         }}
       />
       <Tabs.Screen
         name="deleted"
         options={{
           title: 'Deleted',
-          tabBarIcon: ({ color }) => <MaterialIcons color={color} size={28} name="folder-delete" />,
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons color={color} size={28} name="folder-delete" />
+          ),
         }}
       />
     </Tabs>
