@@ -18,7 +18,6 @@ export const ArticlesList = ({ type }: ArticlesListProps) => {
     const { refreshArticles, loading, filteredArticles, favoritedArticles, deletedArticles, error, deleteArticle, toggleFavoriteArticle } = useArticlesManager();
 
     const handleDelete = useCallback((article: Article) => {
-        console.log('handleDelete');
         deleteArticle(article);
     }, []);
 
