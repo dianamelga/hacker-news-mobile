@@ -1,13 +1,14 @@
 export interface Article {
     objectID: string;
-    title: string;
+    story_id: string;
+    story_title: string;
     url: string;
     author: string;
     created_at: string; // ISO string (can be converted to a Date if needed)
-    points: number;
     story_text: string | null;
     comment_text: string | null;
     num_comments: number;
+    is_favorite: boolean; // TODO: create domain object
 }
 
 export interface HackerNewsResponse {

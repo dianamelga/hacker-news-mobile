@@ -8,6 +8,7 @@ const lightColors = {
     text: '#000000',       // Black for text
     subtleText: '#A0A0A0', // Gray for subtle text
     border: '#E0E0E0',     // Light gray for borders
+    error: '#FF3A44',
 };
 
 const darkColors = {
@@ -18,6 +19,7 @@ const darkColors = {
     text: '#FFFFFF',       // White for text
     subtleText: '#A0A0A0', // Gray for subtle text
     border: '#333333',     // Dark gray for borders
+    error: '#FF3A44',
 };
 
 const colors = {

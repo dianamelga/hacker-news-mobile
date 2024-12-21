@@ -1,19 +1,11 @@
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+import { ArticlesList } from '@/components/ArticlesList';
 import React from 'react';
-import { StyleSheet } from 'react-native';
 
 const FavoritesScreen = () => {
 
-    return <ThemedView style={styles.container}>
-        <ThemedText>FavoritesScreen Screen</ThemedText>
-    </ThemedView>
+    return (
+        <ArticlesList type='favorited' />
+    );
 };
 
 export default FavoritesScreen;
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-});

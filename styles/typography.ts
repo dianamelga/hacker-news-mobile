@@ -9,7 +9,14 @@ const typography = StyleSheet.create({
     },
     heading2: {
         fontFamily: 'Nunito-Bold',
+        fontWeight: 'bold',
         fontSize: 20,
+        color: themeColors.text,
+    },
+    heading3: {
+        fontFamily: 'Nunito-Bold',
+        fontWeight: 'bold',
+        fontSize: 18,
         color: themeColors.text,
     },
     body: {
