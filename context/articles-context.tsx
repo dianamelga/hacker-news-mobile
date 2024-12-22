@@ -6,13 +6,13 @@ import React, {
   ReactNode,
   useMemo,
 } from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Article } from '@/models/HackerNews';
+import { Article } from '@/models/hacker-news';
 import { useFetchArticles } from '@/hooks/use-fetch-articles.hook';
 import {
-  DELETED_STORAGE_KEY,
-  FAVORITED_STORAGE_KEY,
+  DELETED_STORAGE,
+  FAVORITED_STORAGE,
 } from '@/constants/async-storage-keys';
+import { loadLocalData, saveLocalData } from '@/utils/storage';
 
 interface ArticlesContextProps {
   filteredArticles: Article[];
@@ -56,8 +56,6 @@ export const ArticlesProvider: React.FC<ArticlesProviderProps> = ({
   } = useFetchArticles();
 
   useEffect(() => {
-    // AsyncStorage.clear(); // TODO: remove later, just testing
-
     loadArticles();
   }, []);
 
@@ -108,8 +106,8 @@ export const ArticlesProvider: React.FC<ArticlesProviderProps> = ({
   const loadDeletedArticles = async (): Promise<Article[]> => {
     try {
       const storedDeletedArticles =
-        await AsyncStorage.getItem(DELETED_STORAGE_KEY);
-      return storedDeletedArticles ? JSON.parse(storedDeletedArticles) : [];
+        await loadLocalData<Article[]>(DELETED_STORAGE);
+      return storedDeletedArticles || [];
     } catch (error) {
       console.error('Error loading deleted articles:', error);
       return [];
@@ -118,12 +116,9 @@ export const ArticlesProvider: React.FC<ArticlesProviderProps> = ({
 
   const loadFavoritedArticles = async (): Promise<Article[]> => {
     try {
-      const storedFavoritedArticles = await AsyncStorage.getItem(
-        FAVORITED_STORAGE_KEY,
-      );
-      const favoritedArticles: Article[] = storedFavoritedArticles
-        ? JSON.parse(storedFavoritedArticles)
-        : [];
+      const storedFavoritedArticles =
+        await loadLocalData<Article[]>(FAVORITED_STORAGE);
+      const favoritedArticles: Article[] = storedFavoritedArticles || [];
       const deletedArticles = await loadDeletedArticles();
       const favoritedNotDeleted = favoritedArticles.filter(
         (item) =>
@@ -143,10 +138,7 @@ export const ArticlesProvider: React.FC<ArticlesProviderProps> = ({
       const storedDeletedArticles = await loadDeletedArticles();
       const updatedDeletedArticles = [...storedDeletedArticles, article];
 
-      await AsyncStorage.setItem(
-        DELETED_STORAGE_KEY,
-        JSON.stringify(updatedDeletedArticles),
-      );
+      await saveLocalData<Article[]>(DELETED_STORAGE, updatedDeletedArticles);
       setDeletedArticles(updatedDeletedArticles);
     } catch (error) {
       console.error('Error deleting item:', error);
@@ -163,10 +155,11 @@ export const ArticlesProvider: React.FC<ArticlesProviderProps> = ({
         ? favoritedArticles.filter((item) => item.objectID !== article.objectID) // Remove if present
         : [...favoritedArticles, { ...article, is_favorite: true }]; // Add if not present
 
-      await AsyncStorage.setItem(
-        FAVORITED_STORAGE_KEY,
-        JSON.stringify(updatedFavoritedArticles),
+      await saveLocalData<Article[]>(
+        FAVORITED_STORAGE,
+        updatedFavoritedArticles,
       );
+
       setFavorited(updatedFavoritedArticles);
     } catch (error) {
       console.error('Error toggling favorite article:', error);

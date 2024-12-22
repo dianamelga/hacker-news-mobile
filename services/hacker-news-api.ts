@@ -1,4 +1,4 @@
-import { Article } from '@/models/HackerNews';
+import { Article } from '@/models/hacker-news';
 import api from '@/services/api';
 
 export const fetchArticles = async (): Promise<Article[]> => {

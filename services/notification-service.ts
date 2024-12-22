@@ -2,12 +2,12 @@ import { PUSH_NOTIFICATION_TOKEN } from '@/constants/async-storage-keys';
 import {
   sendPushNotification,
   registerForPushNotificationsAsync,
-} from '@/utils/push-notification-utils';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+} from '@/utils/push-notifications';
+import { loadLocalData, saveLocalData } from '@/utils/storage';
 
 export const NotificationService = {
   sendNotification: async (title: string, body: string) => {
-    const pushToken = await AsyncStorage.getItem(PUSH_NOTIFICATION_TOKEN);
+    const pushToken = await loadLocalData<string>(PUSH_NOTIFICATION_TOKEN);
     if (!pushToken) {
       console.warn('No push token available');
       return;
@@ -28,7 +28,7 @@ export const NotificationService = {
         return null;
       }
       console.log('Push notification token registered:', token);
-      await AsyncStorage.setItem(PUSH_NOTIFICATION_TOKEN, token);
+      await saveLocalData<string>(PUSH_NOTIFICATION_TOKEN, token);
     } catch (error) {
       console.error('Failed to register for push notifications:', error);
       return null;

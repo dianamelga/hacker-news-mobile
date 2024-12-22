@@ -1,5 +1,5 @@
 import { useArticlesManager } from '@/hooks/use-articles-manager.hook';
-import { Article } from '@/models/HackerNews';
+import { Article } from '@/models/hacker-news';
 import React, { useCallback, useMemo } from 'react';
 import { FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import { ThemedView } from './themed-view.component';
@@ -42,12 +42,10 @@ export const ArticlesList = ({ type }: ArticlesListProps) => {
     [deleteArticle],
   );
 
-  // Define the callback function for handling item press
   const handleItemPress = (item: Article) => {
-    // Navigate to the detail screen, passing the article URL as a query parameter
     router.push({
       pathname: '/article-detail',
-      params: { articleUrl: item.story_url, previousScreen: previousScreen }, // Assuming `item.url` contains the article URL
+      params: { articleUrl: item.story_url, previousScreen: previousScreen },
     });
   };
 
@@ -66,7 +64,7 @@ export const ArticlesList = ({ type }: ArticlesListProps) => {
   }, [favoritedArticles, deletedArticles, filteredArticles, type]);
 
   return (
-    <ThemedView style={styles.container}>
+    <ThemedView style={styles.container} safeArea={false}>
       {error && (
         <ThemedText style={styles.errorText}>Error: {error}</ThemedText>
       )}

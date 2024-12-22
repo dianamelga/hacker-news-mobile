@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { fetchArticles } from '@/services/hacker-news-api';
-import { Article } from '@/models/HackerNews';
+import { Article } from '@/models/hacker-news';
 
 export const useFetchArticles = () => {
   const [articles, setArticles] = useState<Article[]>([]);

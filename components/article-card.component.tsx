@@ -4,7 +4,7 @@ import { ThemedView } from './themed-view.component';
 import { Swipeable } from 'react-native-gesture-handler';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Card } from 'react-native-paper';
-import { Article } from '@/models/HackerNews';
+import { Article } from '@/models/hacker-news';
 import { themeColors } from '@/styles/colors';
 import { ThemedText } from './themed-text.component';
 
