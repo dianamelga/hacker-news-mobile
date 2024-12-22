@@ -1,4 +1,4 @@
-import { useArticlesManager } from '@/hooks/useArticlesManager';
+import { useArticlesManager } from '@/hooks/use-articles-manager.hook';
 import { Article } from '@/models/HackerNews';
 import React, { useCallback, useMemo } from 'react';
 import { FlatList, StyleSheet, TouchableOpacity } from 'react-native';

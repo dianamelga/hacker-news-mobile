@@ -8,10 +8,11 @@ import React, {
 } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Article } from '@/models/HackerNews';
-import { useFetchArticles } from '@/hooks/useFetchArticles';
-
-const DELETED_STORAGE_KEY = 'deletedArticles';
-const FAVORITED_STORAGE_KEY = 'favoritedArticles';
+import { useFetchArticles } from '@/hooks/use-fetch-articles.hook';
+import {
+  DELETED_STORAGE_KEY,
+  FAVORITED_STORAGE_KEY,
+} from '@/constants/async-storage-keys';
 
 interface ArticlesContextProps {
   filteredArticles: Article[];

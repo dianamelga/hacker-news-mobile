@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "122140520343",
+    "project_id": "hacker-news-mobile-bb6d8",
+    "storage_bucket": "hacker-news-mobile-bb6d8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122140520343:android:8e8ebe395f7b9e578a9ed2",
+        "android_client_info": {
+          "package_name": "com.dianascode.hackernewsmobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAFl_E9saqvYU_dLZa4wRPoEsXXiG8glU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

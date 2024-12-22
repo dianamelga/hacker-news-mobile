@@ -10,13 +10,19 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.dianamelga.hacker-news-mobile"
+      "bundleIdentifier": "com.dianascode.hackernewsmobile"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.dianascode.hackernewsmobile",
+      "googleServicesFile": "./google-services.json",
+      "permissions": [
+        "READ_PHONE_STATE",
+        "READ_PRIVILEGED_PHONE_STATE"
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -50,6 +56,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "a9133d53-dfaf-4079-9296-3fe713e4680c"
+      }
+    },
+    "owner": "dianamelga"
   }
 }

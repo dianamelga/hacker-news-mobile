@@ -1,4 +1,4 @@
-import { useArticlesContext } from '@/context/ArticlesContext';
+import { useArticlesContext } from '@/context/articles-context';
 
 export const useArticlesManager = () => {
   const {
