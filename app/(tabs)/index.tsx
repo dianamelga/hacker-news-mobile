@@ -1,4 +1,4 @@
-import { ArticlesList } from '@/components/ArticlesList';
+import { ArticlesList } from '@/components/articles-list.component';
 
 const HomeScreen = () => {
   return <ArticlesList type="all" />;

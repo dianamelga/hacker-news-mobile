@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
-import { ThemedView } from './ThemedView';
+import { ThemedView } from './themed-view.component';
 import { Swipeable } from 'react-native-gesture-handler';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Card } from 'react-native-paper';
 import { Article } from '@/models/HackerNews';
 import { themeColors } from '@/styles/colors';
-import { ThemedText } from './ThemedText';
+import { ThemedText } from './themed-text.component';
 
 interface ArticleCardProps {
   article: Article;

@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { useLocalSearchParams } from 'expo-router';
-import { ThemedView } from '@/components/ThemedView';
-import { ThemedText } from '@/components/ThemedText';
+import { ThemedView } from '@/components/themed-view.component';
+import { ThemedText } from '@/components/themed-text.component';
 
 const ArticleDetailScreen = () => {
   const { articleUrl } = useLocalSearchParams();

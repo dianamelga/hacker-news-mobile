@@ -1,4 +1,4 @@
-import { ArticlesList } from '@/components/ArticlesList';
+import { ArticlesList } from '@/components/articles-list.component';
 import React from 'react';
 
 const FavoritesScreen = () => {
