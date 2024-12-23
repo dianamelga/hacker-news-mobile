@@ -22,6 +22,7 @@ import { BackgroundTaskService } from '@/services/background-task-service';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
+BackgroundTaskService.defineBackgroundTask();
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();

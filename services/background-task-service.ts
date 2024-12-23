@@ -9,6 +9,7 @@ import { loadLocalData, saveLocalData } from '@/utils/storage';
 import { NotificationPreference } from '@/models/notification-preference';
 import { ALL_TOPICS } from '@/hooks/use-settings.hook';
 import * as BackgroundFetch from 'expo-background-fetch';
+import * as TaskManager from 'expo-task-manager';
 
 export const BackgroundTaskService = {
   checkForNewArticles: async (): Promise<void> => {
@@ -66,6 +67,21 @@ export const BackgroundTaskService = {
     } catch (error) {
       console.error('Error checking for new articles:', error);
     }
+  },
+
+  // This needs to be called in the global scope (e.g outside of your React components)
+  defineBackgroundTask: () => {
+    TaskManager.defineTask(BACKGROUND_FETCH_TASK, async () => {
+      console.log('Executing background tasks...');
+      try {
+        await BackgroundTaskService.checkForNewArticles();
+
+        return BackgroundFetch.BackgroundFetchResult.NewData;
+      } catch (error) {
+        console.error('Error executing background task:', error);
+        return BackgroundFetch.BackgroundFetchResult.Failed;
+      }
+    });
   },
 
   // Note: This does NOT need to be in the global scope and CAN be used in your React components!
