@@ -11,9 +11,9 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.dianascode.hackernewsmobile",
-      "entitlements": {
-        "aps-environment": "production"
-      },
+      "infoPlist": {
+        "UIBackgroundModes": ["fetch", "remote-notification"]
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -36,7 +36,14 @@
       "expo-background-fetch",
       "expo-task-manager",
       "expo-router",
-      "expo-notifications",
+        [
+          "expo-notifications",
+          {
+            "icon": "./assets/images/icon.png",
+            "color": "#ffffff",
+            "mode": "development"
+          }
+        ],
       [
         "expo-font",
         {

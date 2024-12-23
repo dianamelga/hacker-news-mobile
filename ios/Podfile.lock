@@ -10,8 +10,6 @@ PODS:
     - ExpoModulesCore
   - EXNotifications (0.29.11):
     - ExpoModulesCore
-  - EXPermissions (14.4.0):
-    - ExpoModulesCore
   - Expo (52.0.21):
     - ExpoModulesCore
   - expo-dev-client (5.0.6):
@@ -1872,7 +1870,7 @@ PODS:
     - React-logger (= 0.76.5)
     - React-perflogger (= 0.76.5)
     - React-utils (= 0.76.5)
-  - RNCAsyncStorage (2.1.0):
+  - RNCAsyncStorage (1.23.1):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2046,7 +2044,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNSVG (15.10.1):
+  - RNSVG (15.8.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2066,9 +2064,9 @@ PODS:
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - RNSVG/common (= 15.10.1)
+    - RNSVG/common (= 15.8.0)
     - Yoga
-  - RNSVG/common (15.10.1):
+  - RNSVG/common (15.8.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2101,7 +2099,6 @@ DEPENDENCIES:
   - EXJSONUtils (from `../node_modules/expo-json-utils/ios`)
   - EXManifests (from `../node_modules/expo-manifests/ios`)
   - EXNotifications (from `../node_modules/expo-notifications/ios`)
-  - EXPermissions (from `../node_modules/expo-permissions/ios`)
   - Expo (from `../node_modules/expo`)
   - expo-dev-client (from `../node_modules/expo-dev-client/ios`)
   - expo-dev-launcher (from `../node_modules/expo-dev-launcher`)
@@ -2215,8 +2212,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-manifests/ios"
   EXNotifications:
     :path: "../node_modules/expo-notifications/ios"
-  EXPermissions:
-    :path: "../node_modules/expo-permissions/ios"
   Expo:
     :path: "../node_modules/expo"
   expo-dev-client:
@@ -2409,7 +2404,6 @@ SPEC CHECKSUMS:
   EXJSONUtils: 01fc7492b66c234e395dcffdd5f53439c5c29c93
   EXManifests: f30a0c5d3d6cad8db9c01bab579e0aa0df5d3cb2
   EXNotifications: e27ed9ad086026ef0cdd5ddbf9be60abd18232c8
-  EXPermissions: 51c6115893689c3e9787f4819aa67ceeae601038
   Expo: 1544b630fdf4f47d8fe376c2e422f46cd3ed90d4
   expo-dev-client: 8bb4cc68d1c23b585dddd3169787e37337c5ab4a
   expo-dev-launcher: b7a59f9b436f31d1832b88e1d0040b34910d7067
@@ -2494,11 +2488,11 @@ SPEC CHECKSUMS:
   React-utils: 541c6cca08f32597d4183f00e83eef2ed20d4c54
   ReactCodegen: daa13d9e48c9bdb1daac4bd694b9dd54e06681df
   ReactCommon: a6b87a7591591f7a52d9c0fec3aa05e0620d5dd3
-  RNCAsyncStorage: fe98f1b459a87b80f12207da80c50b3a3abb6081
+  RNCAsyncStorage: a927b768986f83467b635cf6d7559e6edb46db7a
   RNGestureHandler: fc5ce5bf284640d3af6431c3a5c3bc121e98d045
   RNReanimated: 56fffbede49b5bddb327616096e822f342978794
   RNScreens: 27587018b2e6082f5172b1ecf158c14a0e8842d6
-  RNSVG: ec2e9d524612ee95db5df143a54518c5404d93f0
+  RNSVG: 536cd3c866c878faf72beaba166c8b02fe2b762b
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   UMAppLoader: bda51f73f8599e336a778b23e0956130d1e244d5
   Yoga: fcc198acd4a55599b3468cfb6ebc526baff5f06e

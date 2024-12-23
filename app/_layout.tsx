@@ -19,6 +19,7 @@ import { SettingsButton } from '@/components/settings-button.component';
 import typography from '@/styles/typography';
 import { useFonts } from 'expo-font';
 import { BackgroundTaskService } from '@/services/background-task-service';
+import React from 'react';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();

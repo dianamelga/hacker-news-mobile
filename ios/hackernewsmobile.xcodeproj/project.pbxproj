@@ -3,25 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B9AABFD8B3D4E8D804AD91A /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5704A3C9D34F484F9D4CF323 /* Nunito-ExtraBold.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		178105F4843744AFA27DA620 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9E1B1705EA7456FA8846F81 /* Nunito-Light.ttf */; };
-		18BC9A3EBC9B4533BF3C2C12 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6013B7455272402FBCC46F9F /* Nunito-Regular.ttf */; };
-		2C0AA2D98C7F428FBAFFD7F9 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E533DE51B4497992030E0 /* Nunito-Black.ttf */; };
-		3985802D6F6E394006CE6FCD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1468A807E94EC53614B3BF8E /* PrivacyInfo.xcprivacy */; };
+		1A2FBD2578844B038DAB7E6A /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AF6E3BAEBC4C10AB76DD29 /* noop-file.swift */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
-		51B9615DDA53470ABB63D2FA /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73298CBECC414635AD5D0C02 /* noop-file.swift */; };
-		85E82F2707E343908BED9965 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3B6152DB2BD4C9D89D704D6 /* Nunito-SemiBold.ttf */; };
+		5B55CF4BE571448295F6A510 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75845B0A27214B82AF5B7609 /* Nunito-SemiBold.ttf */; };
+		6C1AFD4C37AE450981CC6E7A /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A1E12DBB09346E49B8FFBC6 /* Nunito-Regular.ttf */; };
+		7DD827E0513A6AC3A428777C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 8F60E1841AD93A9C0AE1E7BB /* PrivacyInfo.xcprivacy */; };
 		96905EF65AED1B983A6B3ABC /* libPods-hackernewsmobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-hackernewsmobile.a */; };
-		9B0F318EBF064EF6833F5CEB /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7B1676D8C1D468BBCCABDDF /* Nunito-ExtraBold.ttf */; };
-		9F1329AB6F134665B29361F9 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC3C070378B47D3B3870741 /* Nunito-Bold.ttf */; };
+		A8458833E7CC4DA98F483104 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC16CDB04CF84372804EBC95 /* Nunito-Bold.ttf */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		D7A0940BAA0E48C49870E3C3 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80B922FDCCC1410A8B2CF66B /* Nunito-Light.ttf */; };
+		FB638AF16861466EAE5E7155 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBAF1A80C09342F587F842FE /* Nunito-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,20 +31,20 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = hackernewsmobile/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = hackernewsmobile/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = hackernewsmobile/main.m; sourceTree = "<group>"; };
-		1468A807E94EC53614B3BF8E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = hackernewsmobile/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		2FC3C070378B47D3B3870741 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Bold.ttf"; path = "../assets/fonts/Nunito-Bold.ttf"; sourceTree = "<group>"; };
-		4B2367EDB329449E883818F0 /* hackernewsmobile-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "hackernewsmobile-Bridging-Header.h"; path = "hackernewsmobile/hackernewsmobile-Bridging-Header.h"; sourceTree = "<group>"; };
+		23EDBDAC453F4135BEED686B /* hackernewsmobile-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "hackernewsmobile-Bridging-Header.h"; path = "hackernewsmobile/hackernewsmobile-Bridging-Header.h"; sourceTree = "<group>"; };
+		29AF6E3BAEBC4C10AB76DD29 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "hackernewsmobile/noop-file.swift"; sourceTree = "<group>"; };
+		5704A3C9D34F484F9D4CF323 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraBold.ttf"; path = "../assets/fonts/Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-hackernewsmobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hackernewsmobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6013B7455272402FBCC46F9F /* Nunito-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Regular.ttf"; path = "../assets/fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; };
-		6A2E533DE51B4497992030E0 /* Nunito-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Black.ttf"; path = "../assets/fonts/Nunito-Black.ttf"; sourceTree = "<group>"; };
 		6C2E3173556A471DD304B334 /* Pods-hackernewsmobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackernewsmobile.debug.xcconfig"; path = "Target Support Files/Pods-hackernewsmobile/Pods-hackernewsmobile.debug.xcconfig"; sourceTree = "<group>"; };
-		73298CBECC414635AD5D0C02 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "hackernewsmobile/noop-file.swift"; sourceTree = "<group>"; };
+		75845B0A27214B82AF5B7609 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-SemiBold.ttf"; path = "../assets/fonts/Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		7A1E12DBB09346E49B8FFBC6 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Regular.ttf"; path = "../assets/fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-hackernewsmobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hackernewsmobile.release.xcconfig"; path = "Target Support Files/Pods-hackernewsmobile/Pods-hackernewsmobile.release.xcconfig"; sourceTree = "<group>"; };
+		80B922FDCCC1410A8B2CF66B /* Nunito-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Light.ttf"; path = "../assets/fonts/Nunito-Light.ttf"; sourceTree = "<group>"; };
+		8F60E1841AD93A9C0AE1E7BB /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = hackernewsmobile/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = hackernewsmobile/SplashScreen.storyboard; sourceTree = "<group>"; };
-		B3B6152DB2BD4C9D89D704D6 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-SemiBold.ttf"; path = "../assets/fonts/Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
-		B7B1676D8C1D468BBCCABDDF /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraBold.ttf"; path = "../assets/fonts/Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
-		C9E1B1705EA7456FA8846F81 /* Nunito-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Light.ttf"; path = "../assets/fonts/Nunito-Light.ttf"; sourceTree = "<group>"; };
+		DBAF1A80C09342F587F842FE /* Nunito-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Black.ttf"; path = "../assets/fonts/Nunito-Black.ttf"; sourceTree = "<group>"; };
+		EC16CDB04CF84372804EBC95 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Bold.ttf"; path = "../assets/fonts/Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-hackernewsmobile/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,9 +71,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				73298CBECC414635AD5D0C02 /* noop-file.swift */,
-				4B2367EDB329449E883818F0 /* hackernewsmobile-Bridging-Header.h */,
-				1468A807E94EC53614B3BF8E /* PrivacyInfo.xcprivacy */,
+				29AF6E3BAEBC4C10AB76DD29 /* noop-file.swift */,
+				23EDBDAC453F4135BEED686B /* hackernewsmobile-Bridging-Header.h */,
+				8F60E1841AD93A9C0AE1E7BB /* PrivacyInfo.xcprivacy */,
 			);
 			name = hackernewsmobile;
 			sourceTree = "<group>";
@@ -103,7 +103,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
-				E145075822AD498E9E88F605 /* Resources */,
+				9BA69DDA4854497586D0260E /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -124,6 +124,20 @@
 				FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */,
 			);
 			name = hackernewsmobile;
+			sourceTree = "<group>";
+		};
+		9BA69DDA4854497586D0260E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DBAF1A80C09342F587F842FE /* Nunito-Black.ttf */,
+				EC16CDB04CF84372804EBC95 /* Nunito-Bold.ttf */,
+				5704A3C9D34F484F9D4CF323 /* Nunito-ExtraBold.ttf */,
+				80B922FDCCC1410A8B2CF66B /* Nunito-Light.ttf */,
+				7A1E12DBB09346E49B8FFBC6 /* Nunito-Regular.ttf */,
+				75845B0A27214B82AF5B7609 /* Nunito-SemiBold.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		BB2F792B24A3F905000567C9 /* Supporting */ = {
@@ -152,19 +166,6 @@
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
 		};
-		E145075822AD498E9E88F605 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				6A2E533DE51B4497992030E0 /* Nunito-Black.ttf */,
-				2FC3C070378B47D3B3870741 /* Nunito-Bold.ttf */,
-				B7B1676D8C1D468BBCCABDDF /* Nunito-ExtraBold.ttf */,
-				C9E1B1705EA7456FA8846F81 /* Nunito-Light.ttf */,
-				6013B7455272402FBCC46F9F /* Nunito-Regular.ttf */,
-				B3B6152DB2BD4C9D89D704D6 /* Nunito-SemiBold.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,13 +174,13 @@
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "hackernewsmobile" */;
 			buildPhases = (
 				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
-				08E31CADF867FAC3E8DD8504 /* [Expo] Configure project */,
+				67FE291443F2FFF5E7A48D64 /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				C89E443533CABF15D283447B /* [CP] Embed Pods Frameworks */,
+				39DC2AFD0A8B56DAEAFAB1A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,13 +230,13 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				2C0AA2D98C7F428FBAFFD7F9 /* Nunito-Black.ttf in Resources */,
-				9F1329AB6F134665B29361F9 /* Nunito-Bold.ttf in Resources */,
-				9B0F318EBF064EF6833F5CEB /* Nunito-ExtraBold.ttf in Resources */,
-				178105F4843744AFA27DA620 /* Nunito-Light.ttf in Resources */,
-				18BC9A3EBC9B4533BF3C2C12 /* Nunito-Regular.ttf in Resources */,
-				85E82F2707E343908BED9965 /* Nunito-SemiBold.ttf in Resources */,
-				3985802D6F6E394006CE6FCD /* PrivacyInfo.xcprivacy in Resources */,
+				FB638AF16861466EAE5E7155 /* Nunito-Black.ttf in Resources */,
+				A8458833E7CC4DA98F483104 /* Nunito-Bold.ttf in Resources */,
+				0B9AABFD8B3D4E8D804AD91A /* Nunito-ExtraBold.ttf in Resources */,
+				D7A0940BAA0E48C49870E3C3 /* Nunito-Light.ttf in Resources */,
+				6C1AFD4C37AE450981CC6E7A /* Nunito-Regular.ttf in Resources */,
+				5B55CF4BE571448295F6A510 /* Nunito-SemiBold.ttf in Resources */,
+				7DD827E0513A6AC3A428777C /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +280,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		08E31CADF867FAC3E8DD8504 /* [Expo] Configure project */ = {
+		39DC2AFD0A8B56DAEAFAB1A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hackernewsmobile/Pods-hackernewsmobile-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hackernewsmobile/Pods-hackernewsmobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67FE291443F2FFF5E7A48D64 /* [Expo] Configure project */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -315,7 +334,6 @@
 				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoSystemUI/ExpoSystemUI_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/RCT-Folly/RCT-Folly_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/RNCAsyncStorage/RNCAsyncStorage_resources.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/RNSVG/RNSVGFilters.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/React-Core_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-cxxreact/React-cxxreact_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/boost/boost_privacy.bundle",
@@ -335,7 +353,6 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoSystemUI_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCT-Folly_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RNCAsyncStorage_resources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RNSVGFilters.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/React-Core_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/React-cxxreact_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/boost_privacy.bundle",
@@ -348,24 +365,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hackernewsmobile/Pods-hackernewsmobile-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C89E443533CABF15D283447B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hackernewsmobile/Pods-hackernewsmobile-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hackernewsmobile/Pods-hackernewsmobile-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -376,7 +375,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
-				51B9615DDA53470ABB63D2FA /* noop-file.swift in Sources */,
+				1A2FBD2578844B038DAB7E6A /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +390,6 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = hackernewsmobile/hackernewsmobile.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ANB5JR6FGB;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -399,10 +397,7 @@
 				);
 				INFOPLIST_FILE = hackernewsmobile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -428,13 +423,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = hackernewsmobile/hackernewsmobile.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ANB5JR6FGB;
 				INFOPLIST_FILE = hackernewsmobile/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -499,10 +490,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					/usr/lib/swift,
-					"$(inherited)",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
 				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/usr/lib/swift\"$(inherited)\"";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -558,10 +546,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					/usr/lib/swift,
-					"$(inherited)",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
 				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/usr/lib/swift\"$(inherited)\"";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = (

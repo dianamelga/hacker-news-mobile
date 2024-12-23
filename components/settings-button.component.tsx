@@ -1,5 +1,6 @@
 import { MaterialIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import React from 'react';
 import { Pressable } from 'react-native-gesture-handler';
 
 export const SettingsButton = () => {
