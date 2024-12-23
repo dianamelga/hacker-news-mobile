@@ -1,9 +1,11 @@
 import { NOTIFICATION_PREFERENCES } from '@/constants/async-storage-keys';
 import { NotificationPreference } from '@/models/notification-preference';
+import { BackgroundTaskService } from '@/services/background-task-service';
 import { loadLocalData, saveLocalData } from '@/utils/storage';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
-const TOPICS = ['facebook', 'android', 'ios', 'apple', 'google'];
+export const ALL_TOPICS = 'all topics';
+const TOPICS = ['facebook', 'android', 'ios', 'apple', 'google', ALL_TOPICS];
 
 export const useSettingsScreen = () => {
   const [notificationPrefs, setNotificationPrefs] = useState<
@@ -23,7 +25,7 @@ export const useSettingsScreen = () => {
         const defaultPreferences: NotificationPreference[] = TOPICS.map(
           (topic) => ({
             topic: topic,
-            notificationsEnabled: true,
+            notificationsEnabled: topic !== ALL_TOPICS,
           }),
         );
 
@@ -39,20 +41,27 @@ export const useSettingsScreen = () => {
   }, []);
 
   // Toggle preference and persist to storage
-  const togglePreference = async (preference: NotificationPreference) => {
-    const updatedPreferences = notificationPrefs.map((item) =>
-      item === preference
-        ? { ...item, notificationsEnabled: !item.notificationsEnabled }
-        : item,
-    );
+  const togglePreference = useCallback(
+    async (preference: NotificationPreference) => {
+      const updatedPreferences = notificationPrefs.map((item) =>
+        item === preference || preference.topic === ALL_TOPICS
+          ? { ...item, notificationsEnabled: !item.notificationsEnabled }
+          : item,
+      );
 
-    setNotificationPrefs(updatedPreferences);
+      setNotificationPrefs(updatedPreferences);
 
-    await saveLocalData<NotificationPreference[]>(
-      NOTIFICATION_PREFERENCES,
-      updatedPreferences,
-    );
-  };
+      await saveLocalData<NotificationPreference[]>(
+        NOTIFICATION_PREFERENCES,
+        updatedPreferences,
+      );
+    },
+    [notificationPrefs],
+  );
 
-  return { notificationPrefs, togglePreference };
+  const notifyAboutNewArticles = useCallback(() => {
+    BackgroundTaskService.checkForNewArticles();
+  }, []);
+
+  return { notificationPrefs, togglePreference, notifyAboutNewArticles };
 };

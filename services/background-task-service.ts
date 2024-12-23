@@ -28,15 +28,23 @@ export const BackgroundTaskService = {
         NOTIFICATION_PREFERENCES,
       );
 
-      if (newArticles.length > 0 && preferredTopics) {
+      if (
+        (newArticles.length > 0 && preferredTopics) ||
+        (preferredTopics &&
+          preferredTopics.some((pref) => pref.topic === 'all topics'))
+      ) {
         // Filter articles based on preferred topics
-        const filteredArticles = newArticles.filter((article) =>
-          preferredTopics.some((pref) =>
-            article.story_title
-              ?.toLowerCase()
-              .includes(pref.topic.toLowerCase()),
-          ),
-        );
+        const filteredArticles = preferredTopics.some(
+          (pref) => pref.topic === 'all topics',
+        )
+          ? newArticles
+          : newArticles.filter((article) =>
+              preferredTopics.some((pref) =>
+                article.story_title
+                  ?.toLowerCase()
+                  .includes(pref.topic.toLowerCase()),
+              ),
+            );
 
         if (filteredArticles.length > 0) {
           // Send a notification for each relevant article
@@ -46,7 +54,11 @@ export const BackgroundTaskService = {
               article.story_title,
             );
           });
+        } else {
+          console.log('No new articles found for current preferences');
         }
+      } else {
+        console.log('No new articles found');
       }
     } catch (error) {
       console.error('Error checking for new articles:', error);
