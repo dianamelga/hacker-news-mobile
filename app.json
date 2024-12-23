@@ -10,7 +10,10 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.dianascode.hackernewsmobile"
+      "bundleIdentifier": "com.dianascode.hackernewsmobile",
+      "entitlements": {
+        "aps-environment": "production"
+      },
     },
     "android": {
       "adaptiveIcon": {
