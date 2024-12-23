@@ -1,7 +1,4 @@
-import {
-  PrimaryButton,
-  SecondaryButton,
-} from '@/components/themed-button.component';
+import { PrimaryButton } from '@/components/themed-button.component';
 import { ThemedText } from '@/components/themed-text.component';
 import { ThemedView } from '@/components/themed-view.component';
 import { useSettingsScreen } from '@/hooks/use-settings.hook';
