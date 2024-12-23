@@ -14,11 +14,11 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { ArticlesProvider } from '@/context/articles-context';
 import { StyleSheet } from 'react-native';
-import { registerBackgroundFetchAsync } from '@/utils/background-tasks';
 import { NotificationService } from '@/services/notification-service';
 import { SettingsButton } from '@/components/settings-button.component';
 import typography from '@/styles/typography';
 import { useFonts } from 'expo-font';
+import { BackgroundTaskService } from '@/services/background-task-service';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -38,7 +38,7 @@ export default function RootLayout() {
   const setupTasks = async () => {
     try {
       await NotificationService.registerForPushNotifications();
-      await registerBackgroundFetchAsync();
+      await BackgroundTaskService.registerBackgroundFetchAsync();
     } catch (error) {
       console.error('Error setting up background fetch:', error);
     } finally {

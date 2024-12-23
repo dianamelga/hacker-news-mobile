@@ -33,6 +33,8 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      "expo-background-fetch",
+      "expo-task-manager",
       "expo-router",
       [
         "expo-font",

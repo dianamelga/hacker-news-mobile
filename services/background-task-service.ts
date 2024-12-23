@@ -1,11 +1,14 @@
 import { NotificationService } from '@/services/notification-service';
 import { fetchArticles } from './hacker-news-api';
 import {
+  BACKGROUND_FETCH_TASK,
   LAST_CHECK_TIME,
   NOTIFICATION_PREFERENCES,
 } from '@/constants/async-storage-keys';
 import { loadLocalData, saveLocalData } from '@/utils/storage';
 import { NotificationPreference } from '@/models/notification-preference';
+import { ALL_TOPICS } from '@/hooks/use-settings.hook';
+import * as BackgroundFetch from 'expo-background-fetch';
 
 export const BackgroundTaskService = {
   checkForNewArticles: async (): Promise<void> => {
@@ -31,11 +34,11 @@ export const BackgroundTaskService = {
       if (
         (newArticles.length > 0 && preferredTopics) ||
         (preferredTopics &&
-          preferredTopics.some((pref) => pref.topic === 'all topics'))
+          preferredTopics.some((pref) => pref.topic === ALL_TOPICS))
       ) {
         // Filter articles based on preferred topics
         const filteredArticles = preferredTopics.some(
-          (pref) => pref.topic === 'all topics',
+          (pref) => pref.topic === ALL_TOPICS,
         )
           ? newArticles
           : newArticles.filter((article) =>
@@ -63,5 +66,20 @@ export const BackgroundTaskService = {
     } catch (error) {
       console.error('Error checking for new articles:', error);
     }
+  },
+
+  // Note: This does NOT need to be in the global scope and CAN be used in your React components!
+  registerBackgroundFetchAsync: async () => {
+    return BackgroundFetch.registerTaskAsync(BACKGROUND_FETCH_TASK, {
+      minimumInterval: 60 * 15, // 15 minutes
+      stopOnTerminate: false, // android only,
+      startOnBoot: true, // android only
+    });
+  },
+
+  // (Optional) Unregister tasks by specifying the task name
+  // Note: This does NOT need to be in the global scope and CAN be used in your React components!
+  unregisterBackgroundFetchAsync: async () => {
+    return BackgroundFetch.unregisterTaskAsync(BACKGROUND_FETCH_TASK);
   },
 };

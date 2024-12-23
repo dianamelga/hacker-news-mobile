@@ -16,18 +16,3 @@ TaskManager.defineTask(BACKGROUND_FETCH_TASK, async () => {
     return BackgroundFetch.BackgroundFetchResult.Failed;
   }
 });
-
-// Note: This does NOT need to be in the global scope and CAN be used in your React components!
-export const registerBackgroundFetchAsync = async () => {
-  return BackgroundFetch.registerTaskAsync(BACKGROUND_FETCH_TASK, {
-    minimumInterval: 60 * 15, // 15 minutes
-    stopOnTerminate: false, // android only,
-    startOnBoot: true, // android only
-  });
-};
-
-// (Optional) Unregister tasks by specifying the task name
-// Note: This does NOT need to be in the global scope and CAN be used in your React components!
-export const unregisterBackgroundFetchAsync = async () => {
-  return BackgroundFetch.unregisterTaskAsync(BACKGROUND_FETCH_TASK);
-};
