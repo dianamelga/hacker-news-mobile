@@ -36,6 +36,7 @@
       "expo-background-fetch",
       "expo-task-manager",
       "expo-router",
+      "expo-notifications",
       [
         "expo-font",
         {
