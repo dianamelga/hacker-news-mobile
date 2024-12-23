@@ -1,7 +1,9 @@
 import { PUSH_NOTIFICATION_TOKEN } from '@/constants/async-storage-keys';
+import * as Notifications from 'expo-notifications';
 import {
   sendPushNotification,
   registerForPushNotificationsAsync,
+  addNotificationOpenedListener,
 } from '@/utils/push-notifications';
 import { loadLocalData, saveLocalData } from '@/utils/storage';
 
@@ -33,5 +35,11 @@ export const NotificationService = {
       console.error('Failed to register for push notifications:', error);
       return null;
     }
+  },
+
+  addNotificationOpenedListener(
+    listener: (response: Notifications.NotificationResponse) => void,
+  ) {
+    addNotificationOpenedListener(listener);
   },
 };

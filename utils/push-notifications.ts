@@ -69,8 +69,15 @@ export async function sendPushNotification(
     method: 'POST',
     headers: {
       Accept: 'application/json',
+      'Accept-encoding': 'gzip, deflate',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(message),
   });
+}
+
+export async function addNotificationOpenedListener(
+  listener: (response: Notifications.NotificationResponse) => void,
+) {
+  Notifications.addNotificationResponseReceivedListener(listener);
 }
