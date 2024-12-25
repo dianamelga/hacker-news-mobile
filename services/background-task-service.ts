@@ -55,7 +55,7 @@ export const BackgroundTaskService = {
           filteredArticles.forEach((article) => {
             NotificationService.sendNotification(
               'New Article Available!',
-              article.story_title,
+              article.story_url,
             );
           });
         } else {
