@@ -1,11 +1,9 @@
 import { NOTIFICATION_PREFERENCES } from '@/constants/async-storage-keys';
+import { TOPICS, ALL_TOPICS } from '@/constants/default-topics';
 import { NotificationPreference } from '@/models/notification-preference';
 import { BackgroundTaskService } from '@/services/background-task-service';
 import { loadLocalData, saveLocalData } from '@/utils/storage';
 import { useState, useEffect, useCallback } from 'react';
-
-export const ALL_TOPICS = 'all topics';
-const TOPICS = ['facebook', 'android', 'ios', 'apple', 'google', ALL_TOPICS];
 
 export const useSettingsScreen = () => {
   const [notificationPrefs, setNotificationPrefs] = useState<
@@ -60,7 +58,7 @@ export const useSettingsScreen = () => {
   );
 
   const notifyAboutNewArticles = useCallback(() => {
-    BackgroundTaskService.checkForNewArticles();
+    BackgroundTaskService.testNotification();
   }, []);
 
   return { notificationPrefs, togglePreference, notifyAboutNewArticles };

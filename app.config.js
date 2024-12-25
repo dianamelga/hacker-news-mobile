@@ -21,7 +21,7 @@ module.exports = {
         backgroundColor: '#ffffff',
       },
       package: 'com.dianascode.hackernewsmobile',
-      googleServicesFile: process.env.GOOGLE_SERVICES_JSON,
+      googleServicesFile: './android/app/google-services.json',
       permissions: [
         'READ_PHONE_STATE',
         'READ_PRIVILEGED_PHONE_STATE',

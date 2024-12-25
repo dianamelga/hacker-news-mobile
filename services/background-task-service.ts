@@ -7,9 +7,9 @@ import {
 } from '@/constants/async-storage-keys';
 import { loadLocalData, saveLocalData } from '@/utils/storage';
 import { NotificationPreference } from '@/models/notification-preference';
-import { ALL_TOPICS } from '@/hooks/use-settings.hook';
 import * as BackgroundFetch from 'expo-background-fetch';
 import * as TaskManager from 'expo-task-manager';
+import { ALL_TOPICS } from '@/constants/default-topics';
 
 export const BackgroundTaskService = {
   checkForNewArticles: async (): Promise<void> => {
@@ -97,5 +97,13 @@ export const BackgroundTaskService = {
   // Note: This does NOT need to be in the global scope and CAN be used in your React components!
   unregisterBackgroundFetchAsync: async () => {
     return BackgroundFetch.unregisterTaskAsync(BACKGROUND_FETCH_TASK);
+  },
+
+  // TODO: remove later
+  testNotification: () => {
+    NotificationService.sendNotification(
+      'New Article Available!',
+      'this is a test',
+    );
   },
 };
