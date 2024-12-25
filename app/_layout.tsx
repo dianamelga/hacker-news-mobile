@@ -3,7 +3,7 @@ import {
   DefaultTheme,
   ThemeProvider,
 } from '@react-navigation/native';
-import { Stack } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
@@ -26,6 +26,7 @@ SplashScreen.preventAutoHideAsync();
 BackgroundTaskService.defineBackgroundTask();
 
 export default function RootLayout() {
+  const router = useRouter();
   const colorScheme = useColorScheme();
 
   const [fontsLoaded] = useFonts({
@@ -41,6 +42,17 @@ export default function RootLayout() {
     try {
       await NotificationService.registerForPushNotifications();
       await BackgroundTaskService.registerBackgroundFetchAsync();
+      NotificationService.addNotificationOpenedListener((response) => {
+        console.log(`${JSON.stringify(response)}`);
+        const articleUrl = response.notification.request.content.data.body;
+        if (articleUrl) {
+          // Navigate to the article detail screen when the notification is tapped
+          router.push({
+            pathname: '/article-detail',
+            params: { articleUrl: articleUrl, previousScreen: 'all' },
+          });
+        }
+      });
     } catch (error) {
       console.error('Error setting up background fetch:', error);
     } finally {
