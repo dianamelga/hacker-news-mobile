@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen renders the ArticlesList component 1`] = `
+<Text
+  testID="articles-list"
+>
+  Mocked ArticlesList - Type: 
+  all
+</Text>
+`;

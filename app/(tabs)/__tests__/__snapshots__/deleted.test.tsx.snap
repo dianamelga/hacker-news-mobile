@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeletedScreen renders the ArticlesList component 1`] = `
+<Text
+  testID="articles-list"
+>
+  Mocked ArticlesList - Type: 
+  deleted
+</Text>
+`;

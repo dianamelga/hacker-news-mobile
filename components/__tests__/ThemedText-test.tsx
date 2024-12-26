@@ -1,7 +1,6 @@
 import * as React from 'react';
 import renderer from 'react-test-renderer';
-
-import { ThemedText } from '../themed-text.component';
+import { ThemedText } from '@/components/themed-text.component';
 
 it(`renders correctly`, () => {
   const tree = renderer
