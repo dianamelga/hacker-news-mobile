@@ -69,7 +69,7 @@ export const ArticlesList = ({ type }: ArticlesListProps) => {
         <ThemedText style={styles.errorText}>Error: {error}</ThemedText>
       )}
 
-      {articles.length > 0 ? (
+      {articles.length > 0 && !error ? (
         <FlatList
           data={articles}
           keyExtractor={(item) => item.objectID}
