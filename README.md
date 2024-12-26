@@ -10,19 +10,14 @@ This app allows users to read and interact with Hacker News articles, with featu
     git clone https://github.com/dianamelga/hacker-news-mobile
     ```
 
-2. Create .env file and place it on the repository root
-    ```bash
-    EXPO_PUBLIC_API_URL=https://hn.algolia.com/api/v1
-    ```
+2. Copy the `google-services.json` file provided on the email and paste it on the repository root as well
 
-3. Copy the `google-services.json` file provided on the email and paste it on the repository root as well
-
-4. Install dependencies:
+3. Install dependencies:
     ```bash
     npx expo install
     ```
 
-5. Run on ios or android:
+4. Run on ios or android:
     ```bash
     npx expo run:android 
     npx expo run:ios
