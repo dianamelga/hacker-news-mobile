@@ -5,3 +5,4 @@ export const DELETED_STORAGE = 'deletedArticles';
 export const FAVORITED_STORAGE = 'favoritedArticles';
 export const PUSH_NOTIFICATION_TOKEN = 'pushToken';
 export const NOTIFICATION_PREFERENCES = 'notificationPreferences';
+export const FIRST_LAUNCH = 'firstLaunch';
