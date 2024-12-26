@@ -37,7 +37,7 @@ npx jest
 
 - **[Data Fetching](https://github.com/dianamelga/hacker-news-mobile/blob/main/components/articles-list.component.tsx#L85)**: Fetches articles related to Android/iOS from the Hacker News Algolia API on startup and pull-to-refresh.  
   
-- **[Offline Access](https://github.com/dianamelga/hacker-news-mobile/blob/main/services/api.ts#L9)**: Displays articles from the last session when offline.  
+- **[Offline Access](https://github.com/dianamelga/hacker-news-mobile/blob/main/context/articles-context.tsx#L66)**: Displays articles from the last session when offline.  
   
 - **[Article Viewing](https://github.com/dianamelga/hacker-news-mobile/blob/main/components/articles-list.component.tsx#L46)**: Articles are displayed in a scrollable view. Tapping an article opens it in an in-app web view.  
   
