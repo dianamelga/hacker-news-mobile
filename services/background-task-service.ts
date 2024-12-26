@@ -98,12 +98,4 @@ export const BackgroundTaskService = {
   unregisterBackgroundFetchAsync: async () => {
     return BackgroundFetch.unregisterTaskAsync(BACKGROUND_FETCH_TASK);
   },
-
-  // TODO: remove later
-  testNotification: () => {
-    NotificationService.sendNotification(
-      'New Article Available!',
-      'this is a test',
-    );
-  },
 };

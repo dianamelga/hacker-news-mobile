@@ -58,7 +58,7 @@ export const useSettingsScreen = () => {
   );
 
   const notifyAboutNewArticles = useCallback(() => {
-    BackgroundTaskService.testNotification();
+    BackgroundTaskService.checkForNewArticles();
   }, []);
 
   return { notificationPrefs, togglePreference, notifyAboutNewArticles };
