@@ -61,50 +61,12 @@ npx jest
 
 
 ## Tools and Libraries Used in the App
-
-### Networking
-- **Custom API Layer**: Built with TypeScript to interact with external APIs (`services/api.ts`, `services/hacker-news-api.ts`).
-- Used **`axios`** for HTTP requests.
-
-### Local Storage
-- **AsyncStorage**: Utilized via `utils/storage.ts` for persistent data storage (e.g., user preferences, cached articles).
-
-### UI & Unit Testing
-- **Jest**: Framework used for writing unit tests (e.g., `services/__tests__`, `app/(screens)/__tests__`, `app/(tabs)/__tests__`).
-- **React Testing Library**: For testing React components and custom hooks.
-
-### Threading / Background Tasks
-- **expo-task-manager**: Used for background processing, such as fetching data and handling notifications (`services/background-task-service.ts`).
-- **expo-background-fetch**: For scheduling and executing background tasks.
-
-### UI Framework
-- **React Native Components**: Base framework for building app UI.
-- **Expo Router**: For navigation and routing (`app/(screens)`, `app/(tabs)`).
-- **Custom Components**: Tailored components for the app, such as:
-  - `components/article-card.component.tsx`
-  - `components/articles-list.component.tsx`
-  - and more
-- **Expo Font**: Used for custom typography (loading fonts like `Nunito`).
-
-### Dependency Injection (DI)
-- **Context API**: Used for state management and dependency injection:
-  - `context/articles-context.tsx`
-  - `context/preferences-context.tsx`
-
-### Notifications
-- **expo-notifications**: Handles push notifications:
-  - Receiving notifications (`utils/push-notifications.ts`).
-  - Managing notification preferences (`models/notification-preference.ts`).
-
-### Development Tools
-- **Expo CLI**: For building and managing the app.
-- **EAS Build**: For configuring and managing builds (`eas.json`).
-
-### Other Utilities
-- **Custom Hooks**: To enhance reusability and manage app-specific logic:
-  - `hooks/use-articles-manager.hook.ts`
-  - `hooks/use-preferences.hook.ts`
-
----
-
-This list details the tools and libraries utilized in the development of this Expo app. Each library or tool serves a specific purpose, contributing to features like background tasks, push notifications, UI enhancements, and robust testing.
+- **Networking**: `axios` and `axios-cache-interceptor`
+- **Local Storage**: `'@react-native-async-storage/async-storage`
+- **UI & Unit Testing**: `jest-expo`
+- **Background Tasks**: `expo-task-manager` for background processing and `expo-background-fetch` For scheduling and executing background tasks
+- **UI**: React native framework and `react-native-paper` to re-use material components
+- **Navigation**: `expo-router`
+- **Fonts**: `expo-font`
+- **DI**: React Native Context API
+- **Notifications**: `expo-notifications`
