@@ -15,9 +15,10 @@ This app allows users to read and interact with Hacker News articles, with featu
     npx expo install
     ```
 
-3. Start the app:
+3. Run on iOS or Android:
     ```bash
-    npx expo start
+    npx expo run:android 
+    npx expo run:ios
     ```
 
 ## Testing
