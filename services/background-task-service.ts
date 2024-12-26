@@ -10,6 +10,7 @@ import { NotificationPreference } from '@/models/notification-preference';
 import * as BackgroundFetch from 'expo-background-fetch';
 import * as TaskManager from 'expo-task-manager';
 import { ALL_TOPICS } from '@/constants/default-topics';
+import { Article } from '@/models/hacker-news';
 
 export const BackgroundTaskService = {
   checkForNewArticles: async (): Promise<void> => {
