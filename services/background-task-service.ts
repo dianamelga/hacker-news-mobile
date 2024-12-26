@@ -52,9 +52,9 @@ export const BackgroundTaskService = {
 
         if (filteredArticles.length > 0) {
           // Send a notification for each relevant article
-          filteredArticles.forEach((article) => {
+          filteredArticles.forEach((article: Article) => {
             NotificationService.sendNotification(
-              'New Article Available!',
+              article.story_title,
               article.story_url,
             );
           });
