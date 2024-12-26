@@ -77,10 +77,18 @@ export async function sendPushNotification(
 }
 
 export async function addNotificationOpenedListener(
-  listener: (response: Notifications.NotificationResponse) => void,
+  listener: (notification: Notifications.Notification) => void,
 ) {
-  Notifications.addNotificationResponseReceivedListener(listener);
+  Notifications.addNotificationResponseReceivedListener((response) => {
+    console.log('🎉 Notification Opened: ', response.notification);
+    listener(response.notification);
+  });
   Notifications.addNotificationReceivedListener((notification) => {
     console.log('🔔 Notification Received: ', notification);
+    Notifications.presentNotificationAsync({
+      title: notification.request.content.title,
+      body: notification.request.content.body,
+      data: notification.request.content.data,
+    });
   });
 }

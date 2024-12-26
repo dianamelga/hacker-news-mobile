@@ -38,7 +38,7 @@ export const NotificationService = {
   },
 
   addNotificationOpenedListener(
-    listener: (response: Notifications.NotificationResponse) => void,
+    listener: (notification: Notifications.Notification) => void,
   ) {
     addNotificationOpenedListener(listener);
   },
