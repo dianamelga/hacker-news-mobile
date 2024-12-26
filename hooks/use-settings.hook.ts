@@ -23,7 +23,7 @@ export const useSettingsScreen = () => {
         const defaultPreferences: NotificationPreference[] = TOPICS.map(
           (topic) => ({
             topic: topic,
-            notificationsEnabled: topic !== ALL_TOPICS,
+            notificationsEnabled: true,
           }),
         );
 
@@ -41,11 +41,22 @@ export const useSettingsScreen = () => {
   // Toggle preference and persist to storage
   const togglePreference = useCallback(
     async (preference: NotificationPreference) => {
-      const updatedPreferences = notificationPrefs.map((item) =>
-        item === preference || preference.topic === ALL_TOPICS
-          ? { ...item, notificationsEnabled: !item.notificationsEnabled }
-          : item,
-      );
+      const updatedPreferences =
+        preference.topic !== ALL_TOPICS
+          ? notificationPrefs.map((item) =>
+              item === preference || item.topic === ALL_TOPICS
+                ? {
+                    ...item,
+                    notificationsEnabled: !preference.notificationsEnabled,
+                  }
+                : item,
+            )
+          : notificationPrefs.map((noti) => {
+              return {
+                ...noti,
+                notificationsEnabled: !preference.notificationsEnabled,
+              };
+            });
 
       setNotificationPrefs(updatedPreferences);
 
