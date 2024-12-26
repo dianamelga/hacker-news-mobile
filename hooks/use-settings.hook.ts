@@ -44,7 +44,8 @@ export const useSettingsScreen = () => {
       const updatedPreferences =
         preference.topic !== ALL_TOPICS
           ? notificationPrefs.map((item) =>
-              item === preference || item.topic === ALL_TOPICS
+              item === preference ||
+              (item.topic === ALL_TOPICS && item.notificationsEnabled)
                 ? {
                     ...item,
                     notificationsEnabled: !preference.notificationsEnabled,
