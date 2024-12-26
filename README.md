@@ -1,50 +1,70 @@
-# Welcome to your Expo app 👋
+# Hacker News Articles
+![CI](https://img.shields.io/github/workflow/status/dianamelga/hacker-news-mobile/CI?label=Test%20Status&logo=github&style=flat-square)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This app allows users to read and interact with Hacker News articles, with features including article fetching, offline access, push notifications, and more.
 
-## Get started
+## Setup and Installation
 
-1. Install dependencies
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/dianamelga/hacker-news-mobile
+    ```
 
-   ```bash
-   npm install
-   ```
+2. Install dependencies:
+    ```bash
+    npx expo install
+    ```
 
-2. Start the app
-
-   ```bash
+3. Start the app:
+    ```bash
     npx expo start
-   ```
+    ```
 
-In the output, you'll find options to open the app in a
+## Testing
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+To run both UI & Unit Tests, use the following command:
 
 ```bash
-npm run reset-project
+npx jest
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Features
 
-## Learn more
+### Core Functionality
 
-To learn more about developing your project with Expo, look at the following resources:
+- **Data Fetching**: Fetches articles related to Android/iOS from the Hacker News Algolia API on startup and pull-to-refresh.  
+  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/components/articles-list.component.tsx#L85)
+  
+- **Offline Access**: Displays articles from the last session when offline.  
+  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/services/api.ts#L9)
+  
+- **Article Viewing**: Articles are displayed in a scrollable view. Tapping an article opens it in an in-app web view.  
+  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/components/articles-list.component.tsx#L46)
+  
+- **Delete Functionality**: Users can swipe to delete articles. Deleted articles do not reappear on refresh.  
+  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/components/article-card.component.tsx#L41)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Enhanced Features
 
-## Join the community
+- **Favorites**: Users can mark articles as favorites, viewable in a dedicated screen.  
+  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/(tabs)/favorites.tsx#L5)
+  
+- **Deleted Articles View**: View articles that have been deleted from the main list.  
+  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/(tabs)/deleted.tsx#L5)
 
-Join our community of developers creating universal apps.
+### Push Notifications for New Articles
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **Push Notification Permission**: Requests permission on the first launch for sending push notifications.  
+  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/_layout.tsx#L43)
+
+- **User Preferences**: Allows users to set preferences for notifications (e.g., only "Android" or "iOS" articles).  
+  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/(screens)/settings.tsx#L16)
+
+- **Background Fetch**: Periodically checks the API for new articles based on user preferences and sends push notifications when new articles match.  
+  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/_layout.tsx#L44)
+
+- **Notification Interaction**: Tapping on a push notification opens the article in the app.  
+  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/_layout.tsx#L50)
+
+
+
