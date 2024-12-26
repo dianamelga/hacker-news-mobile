@@ -11,6 +11,7 @@ import { useFetchArticles } from '@/hooks/use-fetch-articles.hook';
 import {
   DELETED_STORAGE,
   FAVORITED_STORAGE,
+  ALL_ARTICLES_STORAGE,
 } from '@/constants/async-storage-keys';
 import { loadLocalData, saveLocalData } from '@/utils/storage';
 
@@ -48,6 +49,7 @@ export const ArticlesProvider: React.FC<ArticlesProviderProps> = ({
 }) => {
   const [deletedArticles, setDeletedArticles] = useState<Article[]>([]);
   const [favorited, setFavorited] = useState<Article[]>([]);
+  const [allArticlesCached, setAllArticlesCached] = useState<Article[]>();
   const {
     fetchData,
     articles: allArticles,
@@ -59,6 +61,12 @@ export const ArticlesProvider: React.FC<ArticlesProviderProps> = ({
     loadArticles();
   }, []);
 
+  useEffect(() => {
+    // update cache
+    saveLocalData(ALL_ARTICLES_STORAGE, allArticles);
+    setAllArticlesCached(allArticles);
+  }, [allArticles]);
+
   const favoritedArticles: Article[] = useMemo(() => {
     // ensure we do not show favorited articles that were locally deleted or removed from the API
     return favorited
@@ -69,16 +77,18 @@ export const ArticlesProvider: React.FC<ArticlesProviderProps> = ({
           ),
       )
       .filter((item) =>
-        allArticles.some((article) => article.objectID === item.objectID),
+        (allArticles || allArticlesCached).some(
+          (article) => article.objectID === item.objectID,
+        ),
       )
       .map((item) => {
         return { ...item, is_favorite: true };
       });
-  }, [deletedArticles, favorited, allArticles]);
+  }, [favorited, deletedArticles, allArticles, allArticlesCached]);
 
   const filteredArticles: Article[] = useMemo(() => {
     // ensure we do not show articles that were locally deleted
-    return allArticles
+    return (allArticles || allArticlesCached)
       .filter(
         (item) =>
           !deletedArticles.some(
@@ -93,14 +103,27 @@ export const ArticlesProvider: React.FC<ArticlesProviderProps> = ({
           ),
         };
       });
-  }, [deletedArticles, allArticles, favoritedArticles]);
+  }, [allArticles, allArticlesCached, deletedArticles, favoritedArticles]);
 
   const loadArticles = async () => {
     const articlesDeleted = await loadDeletedArticles();
     setDeletedArticles(articlesDeleted);
     const articlesFavorited = await loadFavoritedArticles();
     setFavorited(articlesFavorited);
+    const allArticlesCached = await loadCachedArticles();
+    setAllArticlesCached(allArticlesCached);
     await fetchData();
+  };
+
+  const loadCachedArticles = async (): Promise<Article[]> => {
+    try {
+      const cachedArticles =
+        await loadLocalData<Article[]>(ALL_ARTICLES_STORAGE);
+      return cachedArticles || [];
+    } catch (error) {
+      console.error('Error loading cached articles:', error);
+      return [];
+    }
   };
 
   const loadDeletedArticles = async (): Promise<Article[]> => {
