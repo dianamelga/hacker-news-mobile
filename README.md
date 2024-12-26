@@ -70,3 +70,10 @@ npx jest
 - **Fonts**: `expo-font`
 - **DI**: React Native Context API
 - **Notifications**: `expo-notifications`
+
+## Demo
+
+
+https://github.com/user-attachments/assets/faff287a-1fec-4ca9-8734-ae1ac6645b35
+
+
