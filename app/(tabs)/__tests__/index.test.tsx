@@ -13,6 +13,11 @@ jest.mock('@/components/articles-list.component', () => {
   };
 });
 
+jest.mock('@/utils/storage', () => ({
+  loadLocalData: jest.fn(),
+  saveLocalData: jest.fn(),
+}));
+
 describe('HomeScreen', () => {
   it('renders the ArticlesList component', () => {
     // Use render from @testing-library/react-native to render HomeScreen
