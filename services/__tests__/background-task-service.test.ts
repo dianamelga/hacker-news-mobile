@@ -8,7 +8,6 @@ import { BackgroundTaskService } from '@/services/background-task-service';
 import { fetchArticles } from '@/services/hacker-news-api';
 import { loadLocalData } from '@/utils/storage';
 
-// Mocking external dependencies
 jest.mock('@/services/notification-service', () => ({
   NotificationService: {
     sendNotification: jest.fn(),
@@ -20,10 +19,9 @@ jest.mock('@/services/hacker-news-api', () => ({
 }));
 jest.mock('expo-background-fetch');
 jest.mock('expo-task-manager');
-// Mocking the module
 jest.mock('@/utils/storage', () => ({
   loadLocalData: jest.fn(),
-  saveLocalData: jest.fn(), // Mock other functions as needed
+  saveLocalData: jest.fn(),
 }));
 
 describe('BackgroundTaskService', () => {
@@ -54,7 +52,6 @@ describe('BackgroundTaskService', () => {
 
       await BackgroundTaskService.checkForNewArticles();
 
-      // Ensure sendNotification was called with the expected arguments
       expect(NotificationService.sendNotification).toHaveBeenCalledWith(
         'New Article Available!',
         'http://example.com',
@@ -116,17 +113,14 @@ describe('BackgroundTaskService', () => {
 
   describe('registerBackgroundFetchAsync', () => {
     it('should register background fetch task', async () => {
-      // Mocking the BackgroundFetch.registerTaskAsync method directly
-      const registerMock = jest.fn().mockResolvedValue(undefined); // Ensure it resolves to undefined
+      const registerMock = jest.fn().mockResolvedValue(undefined);
 
-      // Spy on and mock the BackgroundFetch.registerTaskAsync method
       jest
         .spyOn(BackgroundFetch, 'registerTaskAsync')
         .mockImplementation(registerMock);
 
       await BackgroundTaskService.registerBackgroundFetchAsync();
 
-      // Check that the task is registered with the correct options
       expect(registerMock).toHaveBeenCalledWith(BACKGROUND_FETCH_TASK, {
         minimumInterval: 60 * 15, // 15 minutes
         stopOnTerminate: false,
@@ -145,7 +139,6 @@ describe('BackgroundTaskService', () => {
 
       await BackgroundTaskService.unregisterBackgroundFetchAsync();
 
-      // Check that the task is unregistered
       expect(unregisterMock).toHaveBeenCalledWith(BACKGROUND_FETCH_TASK);
     });
   });
