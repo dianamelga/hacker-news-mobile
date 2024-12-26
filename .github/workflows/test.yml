@@ -1,0 +1,35 @@
+name: Lint and Run Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Use your Node.js version here (e.g., '14' or '16')
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Run ESLint to check for linting issues
+      - name: Run ESLint
+        run: npx eslint .
+
+      # Run tests with Jest
+      - name: Run tests with Jest
+        run: npx jest
