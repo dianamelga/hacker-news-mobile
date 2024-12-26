@@ -15,7 +15,7 @@ This app allows users to read and interact with Hacker News articles, with featu
     EXPO_PUBLIC_API_URL=https://hn.algolia.com/api/v1
     ```
 
-3. Copy the google-services.json file provided on the email and paste it on the repository root as well
+3. Copy the `google-services.json` file provided on the email and paste it on the repository root as well
 
 4. Install dependencies:
     ```bash
