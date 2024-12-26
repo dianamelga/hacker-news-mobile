@@ -32,39 +32,28 @@ npx jest
 
 ### Core Functionality
 
-- **Data Fetching**: Fetches articles related to Android/iOS from the Hacker News Algolia API on startup and pull-to-refresh.  
-  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/components/articles-list.component.tsx#L85)
+- **[Data Fetching](https://github.com/dianamelga/hacker-news-mobile/blob/main/components/articles-list.component.tsx#L85)**: Fetches articles related to Android/iOS from the Hacker News Algolia API on startup and pull-to-refresh.  
   
-- **Offline Access**: Displays articles from the last session when offline.  
-  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/services/api.ts#L9)
+- **[Offline Access](https://github.com/dianamelga/hacker-news-mobile/blob/main/services/api.ts#L9)**: Displays articles from the last session when offline.  
   
-- **Article Viewing**: Articles are displayed in a scrollable view. Tapping an article opens it in an in-app web view.  
-  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/components/articles-list.component.tsx#L46)
+- **[Article Viewing](https://github.com/dianamelga/hacker-news-mobile/blob/main/components/articles-list.component.tsx#L46)**: Articles are displayed in a scrollable view. Tapping an article opens it in an in-app web view.  
   
-- **Delete Functionality**: Users can swipe to delete articles. Deleted articles do not reappear on refresh.  
-  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/components/article-card.component.tsx#L41)
+- **[Delete Functionality](https://github.com/dianamelga/hacker-news-mobile/blob/main/components/article-card.component.tsx#L41)**: Users can swipe to delete articles. Deleted articles do not reappear on refresh.  
 
 ### Enhanced Features
 
-- **Favorites**: Users can mark articles as favorites, viewable in a dedicated screen.  
-  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/(tabs)/favorites.tsx#L5)
-  
-- **Deleted Articles View**: View articles that have been deleted from the main list.  
-  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/(tabs)/deleted.tsx#L5)
+- **[Favorites](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/(tabs)/favorites.tsx#L5)**: Users can mark articles as favorites, viewable in a dedicated screen.  
+
+- **[Deleted Articles View](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/(tabs)/deleted.tsx#L5)**: View articles that have been deleted from the main list.  
 
 ### Push Notifications for New Articles
 
-- **Push Notification Permission**: Requests permission on the first launch for sending push notifications.  
-  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/_layout.tsx#L43)
+- **[Push Notification Permission](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/_layout.tsx#L43)**: Requests permission on the first launch for sending push notifications.  
 
-- **User Preferences**: Allows users to set preferences for notifications (e.g., only "Android" or "iOS" articles).  
-  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/(screens)/settings.tsx#L16)
+- **[User Preferences](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/(screens)/settings.tsx#L16)**: Allows users to set preferences for notifications (e.g., only "Android" or "iOS" articles).  
 
-- **Background Fetch**: Periodically checks the API for new articles based on user preferences and sends push notifications when new articles match.  
-  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/_layout.tsx#L44)
+- **[Background Fetch](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/_layout.tsx#L44)**: Periodically checks the API for new articles based on user preferences and sends push notifications when new articles match.  
 
-- **Notification Interaction**: Tapping on a push notification opens the article in the app.  
-  [View Code](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/_layout.tsx#L50)
-
+- **[Notification Interaction](https://github.com/dianamelga/hacker-news-mobile/blob/main/app/_layout.tsx#L50)**: Tapping on a push notification opens the article in the app.  
 
 
