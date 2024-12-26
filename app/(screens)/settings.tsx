@@ -35,7 +35,7 @@ const SettingsScreen = () => {
         style={styles.notifyButton}
         onPress={notifyAboutNewArticles}
       >
-        Notify About New Articles
+        Notify About New Articles If Any
       </PrimaryButton>
     </ThemedView>
   );
