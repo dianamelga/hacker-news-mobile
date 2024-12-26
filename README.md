@@ -1,5 +1,5 @@
 # Hacker News Articles
-![CI](https://img.shields.io/github/workflow/status/dianamelga/hacker-news-mobile/CI?label=Test%20Status&logo=github&style=flat-square)
+![CI](https://github.com/dianamelga/hacker-news-mobile/actions/workflows/test.yml/badge.svg)
 
 This app allows users to read and interact with Hacker News articles, with features including article fetching, offline access, push notifications, and more.
 
