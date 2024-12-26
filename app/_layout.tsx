@@ -43,8 +43,7 @@ export default function RootLayout() {
       await NotificationService.registerForPushNotifications();
       await BackgroundTaskService.registerBackgroundFetchAsync();
       NotificationService.addNotificationOpenedListener((response) => {
-        console.log(`${JSON.stringify(response)}`);
-        const articleUrl = response.notification.request.content.data.body;
+        const articleUrl = response.notification.request.content.body;
         if (articleUrl) {
           // Navigate to the article detail screen when the notification is tapped
           router.push({

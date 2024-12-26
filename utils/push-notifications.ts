@@ -80,4 +80,7 @@ export async function addNotificationOpenedListener(
   listener: (response: Notifications.NotificationResponse) => void,
 ) {
   Notifications.addNotificationResponseReceivedListener(listener);
+  Notifications.addNotificationReceivedListener((notification) => {
+    console.log('🔔 Notification Received: ', notification);
+  });
 }
