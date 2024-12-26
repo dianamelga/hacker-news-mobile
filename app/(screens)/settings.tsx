@@ -16,6 +16,7 @@ const SettingsScreen = () => {
     <View style={styles.topicRow}>
       <ThemedText type="body">{item.topic}</ThemedText>
       <Switch
+        testID="switch"
         value={item.notificationsEnabled}
         onValueChange={() => togglePreference(item)}
         color={themeColors.primary}
