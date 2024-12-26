@@ -53,7 +53,7 @@ describe('BackgroundTaskService', () => {
       await BackgroundTaskService.checkForNewArticles();
 
       expect(NotificationService.sendNotification).toHaveBeenCalledWith(
-        'New Article Available!',
+        'New React Feature',
         'http://example.com',
       );
     });
