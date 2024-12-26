@@ -62,7 +62,7 @@ npx jest
 
 ## Tools and Libraries Used in the App
 - **Networking**: `axios` and `axios-cache-interceptor`
-- **Local Storage**: `'@react-native-async-storage/async-storage`
+- **Local Storage**: `@react-native-async-storage/async-storage`
 - **UI & Unit Testing**: `jest-expo`
 - **Background Tasks**: `expo-task-manager` for background processing and `expo-background-fetch` For scheduling and executing background tasks
 - **UI**: React native framework and `react-native-paper` to re-use material components
