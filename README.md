@@ -70,6 +70,7 @@ npx jest
 - **Fonts**: `expo-font`
 - **DI**: React Native Context API
 - **Notifications**: `expo-notifications`
+- **CI/CD**: GithubActions (for now just linting and testing, but we can also add a workflow for deployment to playstore/testflight)
 
 ## Demo
 
