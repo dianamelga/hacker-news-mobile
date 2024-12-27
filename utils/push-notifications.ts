@@ -84,11 +84,14 @@ export async function addNotificationOpenedListener(
     listener(response.notification);
   });
   Notifications.addNotificationReceivedListener((notification) => {
-    console.log('🔔 Notification Received: ', notification);
-    Notifications.presentNotificationAsync({
-      title: notification.request.content.title,
-      body: notification.request.content.body,
-      data: notification.request.content.data,
-    });
+    if (Platform.OS === 'android') {
+      // force to present the notification on foreground only for android, iOS already presents it by default
+      console.log('🔔 Notification Received: ', notification);
+      Notifications.presentNotificationAsync({
+        title: notification.request.content.title,
+        body: notification.request.content.body,
+        data: notification.request.content.data,
+      });
+    }
   });
 }
