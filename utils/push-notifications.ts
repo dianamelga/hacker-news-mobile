@@ -44,6 +44,14 @@ export async function registerForPushNotificationsAsync(): Promise<string> {
       ).data;
       console.log(pushTokenString);
 
+      Notifications.setNotificationHandler({
+        handleNotification: async () => ({
+          shouldShowAlert: true, // Display alert
+          shouldPlaySound: true, // Play sound
+          shouldSetBadge: true, // Update app badge
+        }),
+      });
+
       return pushTokenString;
     } catch (e: unknown) {
       throw new Error(`${e}`);
@@ -84,14 +92,6 @@ export async function addNotificationOpenedListener(
     listener(response.notification);
   });
   Notifications.addNotificationReceivedListener((notification) => {
-    if (Platform.OS === 'android') {
-      // force to present the notification on foreground only for android, iOS already presents it by default
-      console.log('🔔 Notification Received: ', notification);
-      Notifications.presentNotificationAsync({
-        title: notification.request.content.title,
-        body: notification.request.content.body,
-        data: notification.request.content.data,
-      });
-    }
+    console.log('🔔 Notification Received: ', notification);
   });
 }
