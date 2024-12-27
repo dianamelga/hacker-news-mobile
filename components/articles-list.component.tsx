@@ -103,6 +103,7 @@ export const ArticlesList = ({ type }: ArticlesListProps) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingBottom: 85,
   },
   contentContainer: {
     paddingVertical: 0,
