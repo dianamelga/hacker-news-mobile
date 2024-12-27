@@ -65,11 +65,11 @@ export const ArticlesList = ({ type }: ArticlesListProps) => {
 
   return (
     <ThemedView style={styles.container} safeArea={false}>
-      {error && (
+      {error && articles.length <= 0 && (
         <ThemedText style={styles.errorText}>Error: {error}</ThemedText>
       )}
 
-      {articles.length > 0 && !error ? (
+      {articles.length > 0 ? (
         <FlatList
           data={articles}
           keyExtractor={(item) => item.objectID}
