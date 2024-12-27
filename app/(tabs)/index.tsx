@@ -12,6 +12,7 @@ const HomeScreen = () => {
     <ThemedView style={styles.container} safeArea={false}>
       <ArticlesList type="all" />
       <EnableNotificationsModal
+        testID={'enable-notifications-modal'}
         isVisible={modalIsVisible}
         hideModal={hideModal}
       />

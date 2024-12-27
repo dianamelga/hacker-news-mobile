@@ -5,12 +5,14 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import React from 'react';
 
 export type ThemedViewProps = ViewProps & {
+  testID?: string;
   lightColor?: string;
   darkColor?: string;
   safeArea?: boolean;
 };
 
 export function ThemedView({
+  testID = 'themed-view',
   style,
   lightColor,
   darkColor,
@@ -23,8 +25,16 @@ export function ThemedView({
   );
 
   return !safeArea ? (
-    <View style={[{ backgroundColor }, style]} {...otherProps} />
+    <View
+      testID={testID}
+      style={[{ backgroundColor }, style]}
+      {...otherProps}
+    />
   ) : (
-    <SafeAreaView style={[{ backgroundColor }, style]} {...otherProps} />
+    <SafeAreaView
+      testID={testID}
+      style={[{ backgroundColor }, style]}
+      {...otherProps}
+    />
   );
 }

@@ -6,13 +6,15 @@ import { PrimaryButton } from '@/components/themed-button.component';
 import { themeColors } from '@/styles/colors';
 
 interface Props {
+  testID: string;
   isVisible: boolean;
   hideModal: () => void;
 }
 
-const EnableNotificationsModal = ({ isVisible, hideModal }: Props) => {
+const EnableNotificationsModal = ({ testID, isVisible, hideModal }: Props) => {
   return (
     <Modal
+      testID={testID}
       visible={isVisible}
       onDismiss={hideModal}
       contentContainerStyle={styles.container}
