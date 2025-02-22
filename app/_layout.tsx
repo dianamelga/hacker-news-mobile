@@ -20,6 +20,8 @@ import typography from '@/styles/typography';
 import { useFonts } from 'expo-font';
 import { BackgroundTaskService } from '@/services/background-task-service';
 import React from 'react';
+import { useAppBoot } from '@/hooks/use-app-boot';
+import EnableNotificationsModal from '@/components/enable-notifications-modal.component';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -28,6 +30,7 @@ BackgroundTaskService.defineBackgroundTask();
 export default function RootLayout() {
   const router = useRouter();
   const colorScheme = useColorScheme();
+  const { modalIsVisible, hideModal } = useAppBoot();
 
   const [fontsLoaded] = useFonts({
     'Nunito-Bold': require('@/assets/fonts/Nunito-Bold.ttf'),
@@ -100,6 +103,11 @@ export default function RootLayout() {
                 />
               </Stack>
               <StatusBar style="auto" />
+              <EnableNotificationsModal
+                testID={'enable-notifications-modal'}
+                isVisible={modalIsVisible}
+                hideModal={hideModal}
+              />
             </ArticlesProvider>
           </SafeAreaProvider>
         </ThemeProvider>

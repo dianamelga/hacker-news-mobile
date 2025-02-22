@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import HomeScreen from '..';
-import { useHomeScreen } from '@/hooks/use-home.hook';
+import { useFirstLaunch } from '@/hooks/use-app-boot';
 
 // Mock dependencies
 jest.mock('@/hooks/use-home.hook', () => ({
@@ -39,7 +39,7 @@ jest.mock('@/components/enable-notifications-modal.component', () => {
 describe('HomeScreen', () => {
   it('renders the main components correctly', () => {
     // Mock the hook's return values
-    (useHomeScreen as jest.Mock).mockReturnValue({
+    (useFirstLaunch as jest.Mock).mockReturnValue({
       modalIsVisible: false,
       hideModal: jest.fn(),
     });
@@ -57,7 +57,7 @@ describe('HomeScreen', () => {
   it('shows and hides the modal correctly', () => {
     const hideModalMock = jest.fn();
 
-    (useHomeScreen as jest.Mock).mockReturnValue({
+    (useFirstLaunch as jest.Mock).mockReturnValue({
       modalIsVisible: true,
       hideModal: hideModalMock,
     });

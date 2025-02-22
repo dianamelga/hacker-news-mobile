@@ -2,7 +2,7 @@ import { FIRST_LAUNCH } from '@/constants/async-storage-keys';
 import { loadLocalData, saveLocalData } from '@/utils/storage';
 import { useCallback, useEffect, useState } from 'react';
 
-export const useHomeScreen = () => {
+export const useAppBoot = () => {
   const [modalIsVisible, setModalIsVisible] = useState(false);
   const hideModal = useCallback(() => {
     setModalIsVisible(false);
