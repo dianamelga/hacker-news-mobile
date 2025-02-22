@@ -23,6 +23,10 @@ import React from 'react';
 import { useAppBoot } from '@/hooks/use-app-boot';
 import EnableNotificationsModal from '@/components/enable-notifications-modal.component';
 
+if (__DEV__) {
+  require('../ReactotronConfig');
+}
+
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 BackgroundTaskService.defineBackgroundTask();
