@@ -26,6 +26,9 @@ const SettingsScreen = () => {
 
   return (
     <ThemedView style={styles.container} safeArea={false}>
+      <ThemedText type="h2" style={styles.title}>
+        Receive alerts about the following topics:
+      </ThemedText>
       <FlatList
         data={notificationPrefs}
         keyExtractor={(item) => item.topic}
@@ -48,6 +51,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
     flex: 1,
+    gap: 20,
     padding: 16,
   },
   listContainer: {
@@ -56,6 +60,7 @@ const styles = StyleSheet.create({
   notifyButton: {
     marginBottom: 30,
   },
+  title: { textAlign: 'center' },
   topicRow: {
     alignItems: 'center',
     borderBottomColor: '#ddd',

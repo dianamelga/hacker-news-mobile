@@ -99,7 +99,7 @@ export default function RootLayout() {
                 />
                 <Stack.Screen
                   name="(screens)/settings"
-                  options={{ title: 'Settings', headerBackTitle: 'Back' }}
+                  options={{ title: 'Notifications', headerBackTitle: 'Back' }}
                 />
               </Stack>
               <StatusBar style="auto" />
