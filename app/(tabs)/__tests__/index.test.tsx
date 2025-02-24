@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import HomeScreen from '..';
-import { useAppBoot } from '@/hooks/use-app-boot';
+import { useAppBoot } from '@/hooks/use-app-boot.hook';
 
 // Mock dependencies
 jest.mock('@/hooks/use-app-boot.hook', () => ({

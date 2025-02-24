@@ -20,7 +20,7 @@ import typography from '@/styles/typography';
 import { useFonts } from 'expo-font';
 import { BackgroundTaskService } from '@/services/background-task-service';
 import React from 'react';
-import { useAppBoot } from '@/hooks/use-app-boot';
+import { useAppBoot } from '@/hooks/use-app-boot.hook';
 import EnableNotificationsModal from '@/components/enable-notifications-modal.component';
 
 if (__DEV__) {
