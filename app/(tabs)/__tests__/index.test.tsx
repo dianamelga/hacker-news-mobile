@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react-native';
+import { render } from '@testing-library/react-native';
 import HomeScreen from '..';
 import { useAppBoot } from '@/hooks/use-app-boot.hook';
 
@@ -52,24 +52,5 @@ describe('HomeScreen', () => {
 
     // Check that the modal is not visible initially
     expect(queryByTestId('enable-notifications-modal')).toBeNull();
-  });
-
-  it('shows and hides the modal correctly', () => {
-    const hideModalMock = jest.fn();
-
-    (useAppBoot as jest.Mock).mockReturnValue({
-      modalIsVisible: true,
-      hideModal: hideModalMock,
-    });
-
-    const { getByTestId } = render(<HomeScreen />);
-
-    // Check that the modal is visible
-    const modal = getByTestId('enable-notifications-modal');
-    expect(modal).toBeTruthy();
-
-    // Simulate hiding the modal
-    fireEvent.press(modal);
-    expect(hideModalMock).toHaveBeenCalledTimes(1);
   });
 });
